@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVC_DemoPractice.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +11,25 @@ namespace MVC_DemoPractice.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var model = new MyClass
+            {
+                Title = "My Title",
+                Body = "My Body"
+            };
 
+            return View(model);
+
+        }
+
+        public ActionResult ChildAction()
+        {
+            var model = new MyClass
+            {
+                Title = "Child Title",
+                Body = "Child Body"
+            };
+
+            return View(model);
         }
 
         public ActionResult About()

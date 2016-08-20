@@ -1,6 +1,14 @@
-﻿@{
+﻿@model MVC_DemoPractice.Models.MyClass
+
+@{
     ViewBag.Title = "Home Page";
 }
+
+@Html.Partial("_test")
+
+<hr/>
+
+@Html.Action("ChildAction")
 
 <div class="jumbotron">
     <h1>ASP.NET</h1>
